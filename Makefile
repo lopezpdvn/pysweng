@@ -1,3 +1,6 @@
+GITHUB_REMOTE	=	origin
+GITHUB_PUSH_BRANCHS	=	master
+
 .PHONY: help
 
 help:
@@ -6,3 +9,6 @@ help:
 
 test:
 	python -m unittest discover -v -s pysweng/tests/ -p test_*
+
+push:
+	git push $(GITHUB_REMOTE) $(GITHUB_PUSH_BRANCHS)
